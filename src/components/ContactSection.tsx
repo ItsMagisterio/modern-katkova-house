@@ -1,7 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, Navigation } from "lucide-react";
 
 const ContactSection = () => {
+  // Координаты отеля Каткова Хауз
+  const hotelCoords = "43.929700,39.329700";
+  const yandexMapUrl = `https://yandex.ru/map-widget/v1/?pt=${hotelCoords},pm2rdm&z=15&l=map`;
+  
   return (
     <section id="contact" className="py-24 relative">
       {/* Background */}
@@ -21,7 +25,7 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Info */}
           <div className="space-y-6">
             <div className="glass-card p-6 flex items-start gap-4 group hover:scale-[1.02] transition-all duration-300">
@@ -85,25 +89,50 @@ const ContactSection = () => {
                   <br />
                   ул. Магистральная, 26/8а
                 </p>
+                <a
+                  href={`https://yandex.ru/maps/?pt=${hotelCoords}&z=15&l=map`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-primary text-sm mt-2 hover:opacity-80 transition-opacity"
+                >
+                  <Navigation className="w-4 h-4" />
+                  Построить маршрут
+                </a>
               </div>
             </div>
           </div>
 
-          {/* Map or CTA */}
-          <div className="glass-card p-8 flex flex-col justify-center items-center text-center">
-            <div className="w-20 h-20 rounded-3xl bg-gradient-to-br from-primary/30 to-secondary/30 flex items-center justify-center mb-6">
-              <MapPin className="w-10 h-10 text-primary" />
+          {/* Map Section */}
+          <div className="flex flex-col gap-6">
+            {/* Embedded Yandex Map */}
+            <div className="glass-card overflow-hidden h-80 lg:h-96">
+              <iframe
+                src={yandexMapUrl}
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                allowFullScreen
+                style={{ display: 'block' }}
+                title="Расположение отеля Каткова Хауз на карте"
+              />
             </div>
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Приезжайте к нам!
-            </h3>
-            <p className="text-foreground/60 mb-8 max-w-sm">
-              Мы находимся в живописном посёлке Каткова Щель, 
-              в Лазаревском районе Сочи. Бесплатно встретим вас на вокзале!
-            </p>
-            <Button variant="hero" size="xl" className="w-full max-w-xs">
-              Забронировать номер
-            </Button>
+
+            {/* CTA Card */}
+            <div className="glass-card p-8 flex flex-col justify-center items-center text-center">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/30 to-secondary/30 flex items-center justify-center mb-5">
+                <MapPin className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-3">
+                Приезжайте к нам!
+              </h3>
+              <p className="text-foreground/60 mb-6 text-sm">
+                Мы находимся в живописном посёлке Каткова Щель, 
+                в Лазаревском районе Сочи. Бесплатно встретим вас на вокзале!
+              </p>
+              <Button variant="hero" size="lg" className="w-full">
+                Забронировать номер
+              </Button>
+            </div>
           </div>
         </div>
       </div>
