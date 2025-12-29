@@ -2,9 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, MessageCircle, Navigation } from "lucide-react";
 
 const ContactSection = () => {
-  // Координаты отеля Каткова Хауз
-  const hotelCoords = "43.929700,39.329700";
-  const yandexMapUrl = `https://yandex.ru/map-widget/v1/?pt=${hotelCoords},pm2rdm&z=15&l=map`;
+  // Яндекс Карта с организацией Каткова Хауз (ID: 204349937274)
+  const yandexMapUrl = "https://yandex.ru/map-widget/v1/?oid=204349937274&ol=biz&z=16";
   
   return (
     <section id="contact" className="py-24 relative">
@@ -90,7 +89,7 @@ const ContactSection = () => {
                   ул. Магистральная, 26/8а
                 </p>
                 <a
-                  href={`https://yandex.ru/maps/?pt=${hotelCoords}&z=15&l=map`}
+                  href="https://yandex.ru/maps/org/204349937274"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-primary text-sm mt-2 hover:opacity-80 transition-opacity"
