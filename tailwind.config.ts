@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Montserrat', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,33 +60,48 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        sunset: {
+          orange: "hsl(25 95% 55%)",
+          gold: "hsl(35 100% 50%)",
+          coral: "hsl(15 90% 60%)",
+          warm: "hsl(20 40% 12%)",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        "2xl": "1.5rem",
+        "3xl": "2rem",
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
+        "pulse-glow": {
+          "0%, 100%": { boxShadow: "0 0 20px hsl(25 95% 55% / 0.3)" },
+          "50%": { boxShadow: "0 0 40px hsl(25 95% 55% / 0.6)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        float: "float 6s ease-in-out infinite",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+      },
+      backgroundImage: {
+        "gradient-sunset": "linear-gradient(135deg, hsl(25 95% 55%) 0%, hsl(35 100% 50%) 50%, hsl(15 90% 60%) 100%)",
+        "gradient-warm": "linear-gradient(180deg, hsl(25 30% 8%) 0%, hsl(20 40% 12%) 100%)",
+        "gradient-glass": "linear-gradient(135deg, hsl(35 50% 90% / 0.1) 0%, hsl(25 30% 50% / 0.05) 100%)",
       },
     },
   },
