@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -56,6 +57,7 @@ const Navigation = () => {
             <Phone className="w-4 h-4" />
             <span className="font-medium">+7 928 449-23-49</span>
           </a>
+          <ThemeToggle />
           <Button variant="glass" size="lg">
             Забронировать
           </Button>
