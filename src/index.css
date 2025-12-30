@@ -7,45 +7,45 @@
 @layer base {
   :root {
     /* Light theme - бежевые и зелёные тона */
-    --background: 40 30% 96%;
-    --foreground: 90 20% 15%;
+    --background: 45 25% 95%;
+    --foreground: 90 30% 10%;
 
-    --card: 40 25% 92%;
-    --card-foreground: 90 20% 15%;
+    --card: 45 20% 90%;
+    --card-foreground: 90 30% 10%;
 
-    --popover: 40 25% 94%;
-    --popover-foreground: 90 20% 15%;
+    --popover: 45 20% 92%;
+    --popover-foreground: 90 30% 10%;
 
-    --primary: 145 40% 38%;
-    --primary-foreground: 40 30% 98%;
+    --primary: 145 50% 32%;
+    --primary-foreground: 45 30% 98%;
 
-    --secondary: 35 35% 80%;
-    --secondary-foreground: 90 20% 15%;
+    --secondary: 35 30% 75%;
+    --secondary-foreground: 90 30% 10%;
 
-    --muted: 40 20% 88%;
-    --muted-foreground: 90 15% 40%;
+    --muted: 45 15% 85%;
+    --muted-foreground: 90 20% 35%;
 
-    --accent: 85 35% 45%;
-    --accent-foreground: 40 30% 98%;
+    --accent: 85 45% 38%;
+    --accent-foreground: 45 30% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 40 20% 85%;
-    --input: 40 20% 85%;
-    --ring: 145 40% 38%;
+    --border: 45 15% 80%;
+    --input: 45 15% 80%;
+    --ring: 145 50% 32%;
 
     --radius: 1rem;
 
     /* Custom glass variables - light */
-    --glass-bg: 40 25% 95% / 0.7;
-    --glass-border: 90 20% 40% / 0.15;
+    --glass-bg: 45 20% 92% / 0.85;
+    --glass-border: 90 25% 30% / 0.2;
     --glass-blur: 20px;
     
     /* Gradients */
-    --gradient-nature: linear-gradient(135deg, hsl(145 40% 38%) 0%, hsl(85 35% 45%) 50%, hsl(35 35% 60%) 100%);
-    --gradient-warm: linear-gradient(180deg, hsl(40 30% 96%) 0%, hsl(40 25% 92%) 100%);
-    --gradient-glass: linear-gradient(135deg, hsl(40 30% 100% / 0.5) 0%, hsl(90 20% 80% / 0.2) 100%);
+    --gradient-nature: linear-gradient(135deg, hsl(145 50% 32%) 0%, hsl(85 45% 38%) 50%, hsl(35 40% 55%) 100%);
+    --gradient-warm: linear-gradient(180deg, hsl(45 25% 95%) 0%, hsl(45 20% 90%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(45 30% 100% / 0.6) 0%, hsl(90 20% 85% / 0.3) 100%);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
