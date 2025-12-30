@@ -60,11 +60,11 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        sunset: {
-          orange: "hsl(25 95% 55%)",
-          gold: "hsl(35 100% 50%)",
-          coral: "hsl(15 90% 60%)",
-          warm: "hsl(20 40% 12%)",
+        nature: {
+          forest: "hsl(145 35% 45%)",
+          sage: "hsl(85 30% 55%)",
+          sand: "hsl(35 40% 70%)",
+          earth: "hsl(90 10% 12%)",
         },
       },
       borderRadius: {
@@ -88,8 +88,8 @@ export default {
           "50%": { transform: "translateY(-20px)" },
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(25 95% 55% / 0.3)" },
-          "50%": { boxShadow: "0 0 40px hsl(25 95% 55% / 0.6)" },
+          "0%, 100%": { boxShadow: "0 0 20px hsl(145 35% 45% / 0.3)" },
+          "50%": { boxShadow: "0 0 40px hsl(145 35% 45% / 0.6)" },
         },
       },
       animation: {
@@ -99,9 +99,9 @@ export default {
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
       },
       backgroundImage: {
-        "gradient-sunset": "linear-gradient(135deg, hsl(25 95% 55%) 0%, hsl(35 100% 50%) 50%, hsl(15 90% 60%) 100%)",
-        "gradient-warm": "linear-gradient(180deg, hsl(25 30% 8%) 0%, hsl(20 40% 12%) 100%)",
-        "gradient-glass": "linear-gradient(135deg, hsl(35 50% 90% / 0.1) 0%, hsl(25 30% 50% / 0.05) 100%)",
+        "gradient-nature": "linear-gradient(135deg, hsl(145 35% 45%) 0%, hsl(85 30% 55%) 50%, hsl(35 40% 70%) 100%)",
+        "gradient-warm": "linear-gradient(180deg, hsl(90 15% 8%) 0%, hsl(90 10% 12%) 100%)",
+        "gradient-glass": "linear-gradient(135deg, hsl(40 30% 90% / 0.1) 0%, hsl(90 20% 50% / 0.05) 100%)",
       },
     },
   },
