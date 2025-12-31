@@ -93,15 +93,18 @@ const ContactSection = () => {
               rel="noopener noreferrer"
               className="glass-card overflow-hidden h-80 lg:h-96 group relative block"
             >
-              <img
-                src="https://static-maps.yandex.ru/1.x/?ll=39.434722,43.762778&z=16&l=map&size=650,450&pt=39.434722,43.762778,pm2rdm"
-                alt="Расположение отеля Каткова Хауз на карте"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors flex items-center justify-center">
-                <div className="bg-primary text-primary-foreground px-6 py-3 rounded-xl font-semibold flex items-center gap-2 shadow-lg">
-                  <MapPin className="w-5 h-5" />
-                  Открыть на Яндекс.Картах
+              {/* Map container with marker overlay */}
+              <div className="relative w-full h-full">
+                <iframe
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=39.42%2C43.755%2C39.45%2C43.77&layer=mapnik&marker=43.762778%2C39.434722"
+                  className="w-full h-full border-0"
+                  title="Расположение отеля Каткова Хауз на карте"
+                />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors flex items-center justify-center pointer-events-none">
+                  <div className="bg-primary text-primary-foreground px-6 py-3 rounded-xl font-semibold flex items-center gap-2 shadow-lg">
+                    <MapPin className="w-5 h-5" />
+                    Открыть на Яндекс.Картах
+                  </div>
                 </div>
               </div>
             </a>
