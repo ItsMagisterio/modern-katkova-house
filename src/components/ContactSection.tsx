@@ -2,8 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, MessageCircle, Navigation } from "lucide-react";
 
 const ContactSection = () => {
-  // Яндекс Карта с организацией Каткова Хауз (ID: 204349937274)
-  const yandexMapUrl = "https://yandex.ru/map-widget/v1/?oid=204349937274&ol=biz&z=16";
   
   return (
     <section id="contact" className="py-24 relative">
@@ -103,18 +101,25 @@ const ContactSection = () => {
 
           {/* Map Section */}
           <div className="flex flex-col gap-6">
-            {/* Embedded Yandex Map */}
-            <div className="glass-card overflow-hidden h-80 lg:h-96">
-              <iframe
-                src={yandexMapUrl}
-                width="100%"
-                height="100%"
-                frameBorder="0"
-                allowFullScreen
-                style={{ display: 'block' }}
-                title="Расположение отеля Каткова Хауз на карте"
+            {/* Map Preview with Link */}
+            <a
+              href="https://yandex.ru/maps/org/204349937274"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-card overflow-hidden h-80 lg:h-96 group relative block"
+            >
+              <img
+                src="https://static-maps.yandex.ru/1.x/?ll=39.3297,43.9297&z=15&l=map&size=650,450&pt=39.3297,43.9297,pm2rdm"
+                alt="Расположение отеля Каткова Хауз на карте"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
-            </div>
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+                <div className="bg-primary text-primary-foreground px-6 py-3 rounded-xl font-semibold flex items-center gap-2 shadow-lg">
+                  <MapPin className="w-5 h-5" />
+                  Открыть на Яндекс.Картах
+                </div>
+              </div>
+            </a>
 
             {/* CTA Card */}
             <div className="glass-card p-8 flex flex-col justify-center items-center text-center">
