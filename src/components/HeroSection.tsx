@@ -13,7 +13,7 @@ const HeroSection = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-background dark:from-background/60 dark:via-background/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/30 to-background" />
       </div>
 
       {/* Floating Glass Elements */}
@@ -36,16 +36,16 @@ const HeroSection = () => {
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in-up animation-delay-200">
             <span className="gradient-text glow-text">Каткова</span>
             <br />
-            <span className="text-white dark:text-foreground drop-shadow-lg">Щель</span>
+            <span className="text-foreground">Щель</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-white/90 dark:text-foreground/70 mb-8 max-w-2xl mx-auto animate-fade-in-up animation-delay-400 leading-relaxed drop-shadow-md">
+          <p className="text-xl md:text-2xl text-foreground/70 mb-8 max-w-2xl mx-auto animate-fade-in-up animation-delay-400 leading-relaxed">
             Сюда приезжают те, кому нравится проводить отпуск подальше от городского шума, среди красивой природы
           </p>
 
           {/* Location */}
-          <div className="flex items-center justify-center gap-2 text-white/80 dark:text-foreground/60 mb-10 animate-fade-in-up animation-delay-600 drop-shadow">
+          <div className="flex items-center justify-center gap-2 text-foreground/60 mb-10 animate-fade-in-up animation-delay-600">
             <MapPin className="w-5 h-5 text-primary" />
             <span className="text-lg">г. Сочи, Лазаревский район</span>
           </div>
@@ -65,10 +65,10 @@ const HeroSection = () => {
       {/* Scroll Indicator */}
       <a
         href="#rooms"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/70 dark:text-foreground/50 hover:text-white dark:hover:text-foreground transition-colors cursor-pointer animate-bounce"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-foreground/50 hover:text-foreground transition-colors cursor-pointer animate-bounce"
       >
-        <span className="text-sm font-medium drop-shadow">Номера</span>
-        <ChevronDown className="w-6 h-6 drop-shadow" />
+        <span className="text-sm font-medium">Номера</span>
+        <ChevronDown className="w-6 h-6" />
       </a>
     </section>
   );
