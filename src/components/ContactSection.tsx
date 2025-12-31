@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, MessageCircle, Navigation } from "lucide-react";
+import { Phone, Mail, MapPin, Navigation } from "lucide-react";
 
 const ContactSection = () => {
   
@@ -43,20 +42,6 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <div className="glass-card p-6 flex items-start gap-4 group hover:scale-[1.02] transition-all duration-300">
-              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center shrink-0 group-hover:bg-primary/30 transition-colors">
-                <MessageCircle className="w-6 h-6 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-bold text-foreground mb-1">WhatsApp</h3>
-                <p className="text-foreground/70">
-                  Напишите нам и получите предложение с ценами
-                </p>
-                <Button variant="glass" size="sm" className="mt-3">
-                  Написать в WhatsApp
-                </Button>
-              </div>
-            </div>
 
             <div className="glass-card p-6 flex items-start gap-4 group hover:scale-[1.02] transition-all duration-300">
               <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center shrink-0 group-hover:bg-primary/30 transition-colors">
@@ -121,22 +106,6 @@ const ContactSection = () => {
               </div>
             </a>
 
-            {/* CTA Card */}
-            <div className="glass-card p-8 flex flex-col justify-center items-center text-center">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/30 to-secondary/30 flex items-center justify-center mb-5">
-                <MapPin className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">
-                Приезжайте к нам!
-              </h3>
-              <p className="text-foreground/60 mb-6 text-sm">
-                Мы находимся в живописном посёлке Каткова Щель, 
-                в Лазаревском районе Сочи. Бесплатно встретим вас на вокзале!
-              </p>
-              <Button variant="hero" size="lg" className="w-full">
-                Забронировать номер
-              </Button>
-            </div>
           </div>
         </div>
       </div>
