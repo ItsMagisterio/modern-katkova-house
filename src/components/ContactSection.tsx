@@ -72,7 +72,7 @@ const ContactSection = () => {
                   ул. Магистральная, 26/8а
                 </p>
                 <a
-                  href="https://yandex.ru/maps/org/204349937274"
+                  href="https://yandex.ru/maps/org/katkova_khauz/204349937274/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-primary text-sm mt-2 hover:opacity-80 transition-opacity"
@@ -88,13 +88,13 @@ const ContactSection = () => {
           <div className="flex flex-col gap-6">
             {/* Map Preview with Link */}
             <a
-              href="https://yandex.ru/maps/org/204349937274"
+              href="https://yandex.ru/maps/org/katkova_khauz/204349937274/"
               target="_blank"
               rel="noopener noreferrer"
               className="glass-card overflow-hidden h-80 lg:h-96 group relative block"
             >
               <img
-                src="https://static-maps.yandex.ru/1.x/?ll=39.3297,43.9297&z=15&l=map&size=650,450&pt=39.3297,43.9297,pm2rdm"
+                src="https://static-maps.yandex.ru/1.x/?ll=39.434722,43.762778&z=16&l=map&size=650,450&pt=39.434722,43.762778,pm2rdm"
                 alt="Расположение отеля Каткова Хауз на карте"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
