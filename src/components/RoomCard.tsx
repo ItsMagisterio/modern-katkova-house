@@ -26,7 +26,7 @@ const RoomCard = ({
   isLux = false,
 }: RoomCardProps) => {
   return (
-    <div className={`glass-card overflow-hidden group transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_20px_60px_-15px_hsl(25_95%_55%_/_0.3)] ${isLux ? 'border-primary/30' : ''}`}>
+    <div className={`bg-card rounded-2xl border border-border overflow-hidden group transition-transform duration-300 hover:scale-[1.01] shadow-sm hover:shadow-md ${isLux ? 'border-primary/30' : ''}`}>
       {/* Image */}
       <div className="relative h-64 overflow-hidden">
         <img
@@ -45,14 +45,14 @@ const RoomCard = ({
         
         {/* Icon overlay */}
         <div className="absolute bottom-4 left-4 flex gap-3">
-          <div className="glass-card p-2">
+          <div className="bg-card/90 rounded-lg p-2 border border-border">
             <Tv className="w-4 h-4 text-foreground/80" />
           </div>
-          <div className="glass-card p-2">
+          <div className="bg-card/90 rounded-lg p-2 border border-border">
             <Wind className="w-4 h-4 text-foreground/80" />
           </div>
           {isLux && (
-            <div className="glass-card p-2">
+            <div className="bg-card/90 rounded-lg p-2 border border-border">
               <Bath className="w-4 h-4 text-foreground/80" />
             </div>
           )}
