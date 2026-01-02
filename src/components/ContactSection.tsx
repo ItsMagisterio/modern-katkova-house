@@ -93,18 +93,16 @@ const ContactSection = () => {
               rel="noopener noreferrer"
               className="glass-card overflow-hidden h-80 lg:h-96 group relative block"
             >
-              {/* Map container with marker overlay */}
-              <div className="relative w-full h-full">
-                <iframe
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=39.42%2C43.755%2C39.45%2C43.77&layer=mapnik&marker=43.762778%2C39.434722"
-                  className="w-full h-full border-0"
-                  title="Расположение отеля Каткова Хауз на карте"
-                />
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors flex items-center justify-center pointer-events-none">
-                  <div className="bg-primary text-primary-foreground px-6 py-3 rounded-xl font-semibold flex items-center gap-2 shadow-lg">
-                    <MapPin className="w-5 h-5" />
-                    Открыть на Яндекс.Картах
-                  </div>
+              {/* Yandex Static Map */}
+              <img
+                src="https://static-maps.yandex.ru/v1?ll=39.4347,43.7628&z=15&size=650,450&l=map&pt=39.4347,43.7628,pm2rdm"
+                alt="Карта расположения Каткова Хауз"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                <div className="bg-primary text-primary-foreground px-6 py-3 rounded-xl font-semibold flex items-center gap-2 shadow-lg">
+                  <MapPin className="w-5 h-5" />
+                  Открыть на Яндекс.Картах
                 </div>
               </div>
             </a>
