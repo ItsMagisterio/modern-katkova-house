@@ -106,42 +106,17 @@
 
 @layer components {
   .glass-card {
-    @apply relative overflow-hidden rounded-2xl;
-    background: linear-gradient(135deg, 
-      hsl(var(--glass-bg)) 0%, 
-      hsl(0 0% 100% / 0.9) 100%
-    );
-    backdrop-filter: blur(var(--glass-blur));
-    -webkit-backdrop-filter: blur(var(--glass-blur));
-    border: 1px solid hsl(var(--glass-border));
-    box-shadow: 
-      0 8px 32px hsl(25 30% 20% / 0.1),
-      inset 0 1px 0 hsl(0 0% 100% / 0.5);
-  }
-
-  .glass-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--gradient-glass);
-    pointer-events: none;
+    @apply relative overflow-hidden rounded-2xl bg-card border border-border;
+    box-shadow: 0 2px 8px hsl(25 30% 20% / 0.06);
   }
 
   .glass-nav {
-    @apply fixed top-0 left-0 right-0 z-50;
-    background: hsl(0 0% 100% / 0.9);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid hsl(var(--border));
-    box-shadow: 0 2px 20px hsl(25 30% 20% / 0.08);
-  }
-
-  .floating-element {
-    animation: float 6s ease-in-out infinite;
+    @apply fixed top-0 left-0 right-0 z-50 bg-background border-b border-border;
+    box-shadow: 0 1px 4px hsl(25 30% 20% / 0.04);
   }
 
   .glow-text {
-    text-shadow: 0 0 40px hsl(25 95% 50% / 0.4);
+    color: hsl(var(--primary));
   }
 
   .gradient-text {

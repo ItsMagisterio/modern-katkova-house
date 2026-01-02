@@ -42,13 +42,9 @@ const amenities = [
 
 const AmenitiesSection = () => {
   return (
-    <section id="amenities" className="py-24 relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-muted/50 via-background to-muted/30" />
-      
-      {/* Floating elements */}
-      <div className="absolute top-20 right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-20 w-48 h-48 bg-secondary/5 rounded-full blur-3xl" />
+    <section id="amenities" className="py-24 relative overflow-hidden bg-muted/30">
+      {/* Simple background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background to-muted/20" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
@@ -69,8 +65,7 @@ const AmenitiesSection = () => {
           {amenities.map((item, index) => (
             <div
               key={index}
-              className="glass-card p-6 group hover:scale-105 transition-all duration-500 cursor-default"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="bg-card rounded-2xl border border-border p-6 group hover:border-primary/30 transition-colors duration-300"
             >
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
                 <item.icon className="w-7 h-7 text-primary" />
